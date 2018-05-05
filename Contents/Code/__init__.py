@@ -21,7 +21,7 @@ def ShowNBAStreams(title):
 	oc = ObjectContainer(title2=title)
 	oc.add(
         CreateVideoClipObject(
-            url = 'http://d3ea03zoy7sw84.cloudfront.net/live/p2025/playlist.m3u8',
+            url = 'http://d1dzfjk2pzv6t2.cloudfront.net/live/p1401/playlist.m3u8',
             title = 'Test NBA Stream',
             thumb = 'icon-default.png',
             art = 'art-default.jpg',
@@ -31,7 +31,23 @@ def ShowNBAStreams(title):
             c_container = 'mpegts',
             c_protocol = 'hls',
             c_user_agent = None,
-			optimized_for_streaming = False,
+			optimized_for_streaming = True,
+            include_container = False
+        )
+    )
+	oc.add(
+        CreateVideoClipObject(
+            url = 'https://hlslive-l3c-ewr1.media.mlb.com/ls01/mlb/2018/05/05/Home_VIDEO_eng_Toronto_Blue_Jays_Tampa_B_20180505_1525551048404/master_wired60_complete.m3u8',
+            title = 'Test MLB Stream',
+            thumb = 'icon-default.png',
+            art = 'art-default.jpg',
+            summary = 'No description available',
+            c_audio_codec = AudioCodec.AAC,
+            c_video_codec = VideoCodec.H264,
+            c_container = 'mpegts',
+            c_protocol = 'hls',
+            c_user_agent = None,
+			optimized_for_streaming = True,
             include_container = False
         )
     )
